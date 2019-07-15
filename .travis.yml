@@ -3,8 +3,6 @@ php:
   - 7.1.9
 script:
   - cd tests
-before_deploy:
-  - echo '{}' > composer.json
 deploy:
   provider: heroku
   api-key: 
