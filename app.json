@@ -10,8 +10,6 @@
   "repository": "https://github.com/jane-doe/small-sharp-tool",
   "logo": "https://small-sharp-tool.com/logo.svg",
   "success_url": "/welcome",
-  "env": {
-    
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-php"
