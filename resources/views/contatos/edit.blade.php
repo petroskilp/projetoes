@@ -19,12 +19,12 @@
             @csrf
             <div class="form-group">
 
-                <label for="first_name">First Name:</label>
+                <label for="first_name">Nome:</label>
                 <input type="text" class="form-control" name="first_name" value={{ $contact->first_name }} />
             </div>
 
             <div class="form-group">
-                <label for="last_name">Last Name:</label>
+                <label for="last_name">Sobrenome:</label>
                 <input type="text" class="form-control" name="last_name" value={{ $contact->last_name }} />
             </div>
 
@@ -33,18 +33,18 @@
                 <input type="text" class="form-control" name="email" value={{ $contact->email }} />
             </div>
             <div class="form-group">
-                <label for="city">City:</label>
+                <label for="city">Cidade:</label>
                 <input type="text" class="form-control" name="city" value={{ $contact->city }} />
             </div>
             <div class="form-group">
-                <label for="country">Country:</label>
+                <label for="country">País:</label>
                 <input type="text" class="form-control" name="country" value={{ $contact->country }} />
             </div>
             <div class="form-group">
-                <label for="job_title">Job Title:</label>
+                <label for="job_title">Profissão:</label>
                 <input type="text" class="form-control" name="job_title" value={{ $contact->job_title }} />
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>
     </div>
 </div>

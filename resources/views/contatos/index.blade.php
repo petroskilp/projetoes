@@ -11,20 +11,20 @@
 </div>
 <div class="row">
 <div class="col-sm-12">
-    <h1 class="display-3">Contacts</h1>  
+    <h1 class="display-3">Contatos</h1>  
     <div>
-    <a style="margin: 19px;" href="{{ route('contatos.create')}}" class="btn btn-primary">New contact</a>
+    <a style="margin: 19px;" href="{{ route('contatos.create')}}" class="btn btn-primary">Novo contato</a>
     </div>  
   <table class="table table-striped">
     <thead>
         <tr>
           <td>ID</td>
-          <td>Name</td>
+          <td>Nome</td>
           <td>Email</td>
-          <td>Job Title</td>
-          <td>City</td>
-          <td>Country</td>
-          <td colspan = 2>Actions</td>
+          <td>Profissão</td>
+          <td>Cidade</td>
+          <td>País</td>
+          <td colspan = 2>Ações</td>
         </tr>
     </thead>
     <tbody>
@@ -37,13 +37,13 @@
             <td>{{$contact->city}}</td>
             <td>{{$contact->country}}</td>
             <td>
-                <a href="{{ route('contatos.edit',$contact->id)}}" class="btn btn-primary">Edit</a>
+                <a href="{{ route('contatos.edit',$contact->id)}}" class="btn btn-primary">Editar</a>
             </td>
             <td>
                 <form action="{{ route('contatos.destroy', $contact->id)}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                  <button class="btn btn-danger" type="submit">Apagar</button>
                 </form>
             </td>
         </tr>
