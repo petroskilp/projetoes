@@ -20,29 +20,29 @@
             <div class="form-group">
 
                 <label for="first_name">Nome:</label>
-                <input type="text" class="form-control" name="first_name" value={{ $contact->first_name }} />
+                <input type="text" class="form-control" name="first_name" value={{ old('first_name', $contact->first_name) }} />
             </div>
 
             <div class="form-group">
                 <label for="last_name">Sobrenome:</label>
-                <input type="text" class="form-control" name="last_name" value={{ $contact->last_name }} />
+                <input type="text" class="form-control" name="last_name" value={{ old('last_name', $contact->last_name) }} />
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control" name="email" value={{ $contact->email }} />
+                <input type="text" class="form-control" name="email" value={{ old('email', $contact->email) }} />
             </div>
             <div class="form-group">
                 <label for="city">Cidade:</label>
-                <input type="text" class="form-control" name="city" value={{ $contact->city }} />
+                <input type="text" class="form-control" name="city" value={{ old('city', $contact->city) }} />
             </div>
             <div class="form-group">
                 <label for="country">País:</label>
-                <input type="text" class="form-control" name="country" value={{ $contact->country }} />
+                <input type="text" class="form-control" name="country" value={{ old('country', $contact->country) }} />
             </div>
             <div class="form-group">
                 <label for="job_title">Profissão:</label>
-                <input type="text" class="form-control" name="job_title" value={{ $contact->job_title }} />
+                <input type="text" class="form-control" name="job_title" value={{ old('job_title', $contact->job_title) }} />
             </div>
             <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>

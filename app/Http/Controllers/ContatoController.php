@@ -40,7 +40,7 @@ class ContatoController extends Controller
         $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
-            'email'=>'required'
+            'email'=>'required|email:rfc,dns'
         ]);
 
         $contato = new Contato([
@@ -52,7 +52,7 @@ class ContatoController extends Controller
             'country' => $request->get('country')
         ]);
         $contato->save();
-        return redirect('/contatos')->with('success', 'Contact saved!');
+        return redirect('/contatos')->with('success', 'Contato salvo!');
     }
 
     /**
@@ -90,7 +90,7 @@ class ContatoController extends Controller
         $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
-            'email'=>'required'
+            'email'=>'required|email:rfc,dns'
         ]);
 
         $contact = Contato::find($id);
@@ -102,7 +102,7 @@ class ContatoController extends Controller
         $contact->country = $request->get('country');
         $contact->save();
 
-        return redirect('/contatos')->with('success', 'Contact updated!');
+        return redirect('/contatos')->with('success', 'Contato atualizado!');
     }
 
     /**
@@ -116,6 +116,6 @@ class ContatoController extends Controller
         $contact = Contato::find($id);
         $contact->delete();
 
-        return redirect('/contatos')->with('success', 'Contact deleted!');
+        return redirect('/contatos')->with('success', 'Contato apagado!');
     }
 }
