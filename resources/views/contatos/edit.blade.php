@@ -45,6 +45,7 @@
                 <input type="text" class="form-control" name="job_title" value={{ old('job_title', $contact->job_title) }} />
             </div>
             <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="{{ route('contatos.index') }}" class="btn btn-warning">Cancelar</a>
         </form>
     </div>
 </div>
