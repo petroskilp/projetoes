@@ -71,7 +71,7 @@ class ContatosTest extends TestCase
      */
     public function testApagarContato()
     {
-        //Tentar editar um contato que não existe
+        //Tentar apagar um contato
         $contato = factory(Contato::class)->create();
         $this->assertDatabaseHas('contatos', ['id' => $contato->id]);
         $response = $this->delete("/contatos/$contato->id");
