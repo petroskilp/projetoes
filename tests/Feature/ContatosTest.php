@@ -58,7 +58,7 @@ class ContatosTest extends TestCase
     public function testNaoPaginaEditar()
     {
         //Tentar editar um contato que não existe
-        $id=-1;
+        $id=0;
         $response = $this->get("/contatos/$id/edit");
 
         $response->assertStatus(404);
