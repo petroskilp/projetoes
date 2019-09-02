@@ -3,7 +3,7 @@ php:
   - 7.2
 script:
   - composer install
-  - cp .env.example .env
+  - cp .env.test .env
   - php artisan key:generate
   - php artisan migrate
   - vendor/bin/phpunit

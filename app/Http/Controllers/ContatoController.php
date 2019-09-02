@@ -75,7 +75,11 @@ class ContatoController extends Controller
     public function edit($id)
     {
         $contact = Contato::find($id);
-        return view('contatos.edit', compact('contact'));
+        if($contact)
+            return view('contatos.edit', compact('contact'));
+        else{
+            abort(404);
+        }
     }
 
     /**
